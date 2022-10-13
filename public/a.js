@@ -143,6 +143,7 @@ let locationData={
 	function displayWeather(data) {
 
 		changeBackground(data.forcastData.isDay);
+		console.log(data.forcastData.isDay);
 	
 		$('#current .location').html(data.name);
 		$('#current .date').html(data.forcastData.localtime);
@@ -151,10 +152,12 @@ let locationData={
 
 		// $('#current .weatherIcon > div').attr('class', today.icon);
 
-		if(data.forcastData.isDay){
-			$("#sun-moon").attr("src","images/clearSun.svg");
-		}else{
+
+		if(data.forcastData.isDay=="no" ){
 			$("#sun-moon").attr("src","images/clearMoon.svg");
+		}else{
+			$("#sun-moon").attr("src","images/clearSun.svg");
+			
 		}
 		
 		
@@ -251,7 +254,7 @@ let locationData={
 
 
 	function changeBackground(isDay){
-		if(!isDay){
+		if(isDay=="no" || !isDay){
 			$("body").css("background-color", "black");
 			$("body").css("color", "white");
 			$('#locateBtn').css("border", "3px solid white");
