@@ -9,8 +9,17 @@ function forecast(lat,long,callback){
         }else if(response.body.error){
             callback("Unable to find the location",undefined)
         }else{
+            
             const data=((response.body))
-            callback(undefined,`Current temperature is ${data.current.temperature}\u00B0C but it feels like ${data.current.feelslike}\u00B0C`)
+            const forecastData={
+                currentTemp:data.current.temperature,
+                currentStatus:data.current.weather_descriptions[0],
+                isDay:data.current.is_day,
+                localtime:data.location.localtime
+            }
+            // console.log(forecastData);
+
+            callback(undefined,`Current temperature is ${data.current.temperature}\u00B0C but it feels like ${data.current.feelslike}\u00B0C`,forecastData)
         }
         
     })

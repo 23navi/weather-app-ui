@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="a.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/085d712bc8.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+	<!-- Status Bar -->
+	<div id="status">
+		<p></p>
+		<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+		
+	</div>
+
+	
+
+
+	<!-- Current Weather -->
+	<div id="current" class="wrapper">
+		
+		<nav>
+			<button id="locateBtn">
+				<i class="fa fa-location-arrow" aria-hidden="true"></i>
+			</button>
+
+			<br>
+			
+			<div class="cntr">
+				<div class="cntr-innr">
+				<form id="WeatherForm" autocomplete="off">
+					<label class="search" for="inpt_search">
+						<input id="inpt_search" placeholder=""type="text"  autocomplete="false"/>
+					</label>
+					<input type="submit" hidden />
+				</form>
+				  
+				</div>
+			</div>
+
+			
+		</nav>
+		<h1 class="location">Surat, India</h1>
+		<h2 class="date">Todayyyy</h2>
+
+		<div class="weatherIcon">
+			<div class="sunny">
+                <img id="sun-moon" src="images/clearMoon.svg">
+			</div>
+		</div>
+		<p class="temp">72</p>
+		<p class="conditions">Sunny</p>
+	</div>
+
+
+
+
+
+
+	<!-- Future Forecast -->
+	<!-- <div id="future" class="wrapper">
+		<div class="container">
+			<h3 class="day">Mon</h3>
+			<div class="weatherIcon">
+				<div class="partlycloudy">
+					<img src="aa.svg">
+				</div>
+			</div>
+			<p class="conditions">Partly Cloudy</p>
+			<p class="tempRange"><span class="high">64</span> | <span class="low">48</span></p>
+		</div>
+		<div class="container">
+			<h3 class="day">Tue</h3>
+			<div class="weatherIcon">
+				<div class="mostlycloudy">
+					<img src="aa.svg">
+				</div>
+			</div>
+			<p class="conditions">Mostly Cloudy</p>
+			<p class="tempRange"><span class="high">57</span> | <span class="low">45</span></p>
+		</div>
+		<div class="container">
+			<h3 class="day">Wed</h3>
+			<div class="weatherIcon">
+				<div class="rain">
+					<img src="aa.svg">
+				</div>
+			</div>
+			<p class="conditions">Chance of Rain</p>
+			<p class="tempRange"><span class="high">63</span> | <span class="low">59</span></p>
+		</div>
+	</div>
+ -->
+
+
+
+
+
+	<footer>
+		<p id="lastUpdated">Last updated at 12:00pm</p>
+		<!-- <p>Created by <a href="http://tiffanydu.com/" title="Visit Portfolio Site" target="_blank">Tiffany Du</a> | Weather data from <a href="https://www.wunderground.com/" title="Wunderground.com" target="_blank">Wunderground</a></p> -->
+	</footer>
+
+
+	
+	
+
+	<script src="a.js"></script>
+
+    
+</body>
+
+
+
+
+
+
+
+
+</html>
+
+

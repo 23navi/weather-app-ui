@@ -1,17 +1,16 @@
 {
-  "name": "web-server",
+  "name": "wapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node src/app.js"
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "hbs": "^4.1.2",
-    "postman-request": "^2.88.1-postman.30"
+    "express": "^4.18.2",
+    "postman-request": "^2.88.1-postman.31"
   }
 }
