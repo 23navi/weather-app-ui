@@ -111,6 +111,7 @@ button {
 nav {
 	font-size: 1rem;
 	margin: 0 auto;
+	margin-top: 120px;
 	padding: 5% 0 10%;
 }
 #locateBtn{
