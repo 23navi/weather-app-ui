@@ -1,7 +1,9 @@
 const request=require("postman-request")
+require('dotenv').config()
+console.log(process.env.WEATHER_KEY) 
 
 const forwardGeocode=(name,callback)=>{
-    const URL="https://api.mapbox.com/geocoding/v5/mapbox.places/"+name+".json?access_token=pk.eyJ1IjoibmF2aTIzMDgiLCJhIjoiY2twYzU4dDBmMDBxazJvcDcxb2d4Yjd4MiJ9.i1mlZ1G0qqBMxDsq75VLyQ"
+    const URL="https://api.mapbox.com/geocoding/v5/mapbox.places/"+name+".json?access_token="+process.env.MAPBOX_KEY
     request({url:URL,json:true},(error,response)=>{
         if(error){
             callback("Network Error",undefined)
